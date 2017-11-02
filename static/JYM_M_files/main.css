@@ -1,0 +1,29 @@
+#mainbox {}
+#mainbox .tboard {margin-bottom:30px;}
+#mainbox .tboard .title {font-weight:bold;font-size:15px;color:#CD0000;border-bottom:#DCDCDC solid 1px;padding:0 0 10px 0;margin:0;}
+#mainbox .tboard ul {list-style-type:none;padding:0;margin:0;}
+#mainbox .tboard li {}
+#mainbox .tboard li a {display:block;border-bottom:#DCDCDC solid 1px;color:#333333;font-size:14px;padding:6px 0 6px 0;width:100%;height:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#mainbox .tboard .none {padding:10px 0 10px 0;font-size:11px;color:#c0c0c0;border-bottom:#DCDCDC solid 1px;}
+#mainbox .tboard .noline_ a {border-bottom:0;}
+
+#mainbox .mboard {margin-bottom:30px;}
+#mainbox .mboard .title {font-weight:bold;font-size:15px;color:#CD0000;padding:0 0 10px 0;margin:0 0 15px 0;}
+#mainbox .mboard ul {list-style-type:none;padding:0;margin:0;}
+#mainbox .mboard li {float:left;width:140px;margin:0 5px 15px 5px;}
+#mainbox .mboard li div {width:100%;height:85px;background:#efefef;overflow:hidden;}
+#mainbox .mboard li img {width:100%;}
+#mainbox .mboard li a {display:block;height:28px;overflow:hidden;padding:10px 0 0 0;}
+#mainbox .mboard .none {float:none;width:100%;margin:0;padding:10px 0 10px 0;font-size:11px;color:#c0c0c0;border-top:#DCDCDC solid 1px;border-bottom:#DCDCDC solid 1px;}
+#mainbox .mboard .num0 {margin:0;}
+
+#mainbox .fboard {margin-bottom:30px;}
+#mainbox .fboard .title {font-weight:bold;font-size:15px;color:#CD0000;border-bottom:#DCDCDC solid 1px;padding:0 0 10px 0;margin:0;}
+#mainbox .fboard .post {padding:15px 0 15px 0;border-bottom:#DEDEDE solid 1px;}
+#mainbox .fboard .post .xtitle {line-height:190%;}
+#mainbox .fboard .post .xtitle a {display:block;font-weight:bold;font-size:20px;color:#074075;line-height:150%;}
+#mainbox .fboard .post .date {padding-top:10px;color:#074075;}
+#mainbox .fboard .post .cont {margin-top:10px;line-height:170%;font-weight:normal;font-size:14px;color:#35343C;}
+#mainbox .fboard .post .cont img {float:left;width:140px;margin:0 10px 0 0;position:relative;top:7px;}
+#mainbox .fboard .noline {border-bottom:0;}
+#mainbox .fboard .none {padding:10px 0 10px 0;font-size:11px;color:#c0c0c0;border-bottom:#DCDCDC solid 1px;}

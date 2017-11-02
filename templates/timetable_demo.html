@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Vanilla javascript plugin for building nice responsive timetables">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timetable.js demo</title>
+    <link type="text/css" rel="stylesheet" charset="utf-8" href="{{ url_for('static', filename='css/timetablejs.css') }}">
+    <link type="text/css" rel="stylesheet" charset="utf-8" href="{{ url_for('static', filename='css/timetable-event.css') }}">
+  </head>
+  <body>
+
+    <div class="timetable"></div>
+
+    <script src="{{ url_for('static', filename='js/timetable.js') }}"></script>
+
+    <script>
+      var timetable = new Timetable();
+
+      timetable.setScope(10,3)
+
+      timetable.addLocations(['센터 예배실', '센터 친교실', '센터 미디어실', '센터 1:1실', '센터 기도실', '세종대 동방']);
+
+      timetable.addEvent('A', '센터 예배실', new Date(2015,7,17,9,00), new Date(2015,7,17,11,30), { url: '#' });
+      timetable.addEvent('B', '센터 친교실', new Date(2015,7,17,12), new Date(2015,7,17,13), { url: '#' });
+      timetable.addEvent('C', '센터 친교실', new Date(2015,7,17,13,30), new Date(2015,7,17,15), { url: '#' });
+      timetable.addEvent('D', '세종대 동방', new Date(2015,7,17,17,45), new Date(2015,7,17,19,30), { class: 'vip-only', data: { maxPlayers: 14, gameType: 'Capture the flag' } });
+      timetable.addEvent('E', '세종대 동방', new Date(2015,7,17,21), new Date(2015,7,18,1,30), { url: '#' });
+      timetable.addEvent('F', '센터 1:1실', new Date(2015,7,17,11,30), new Date(2015,7,17,20)); // options attribute is not used for this event
+      timetable.addEvent('G', '센터 미디어실', new Date(2015,7,17,12,30), new Date(2015,7,17,16,15)); // options attribute is not used for this event
+      timetable.addEvent('H', '센터 기도실', new Date(2015,7,17,9,30), new Date(2015,7,17,11,45), { url: '#' });
+      timetable.addEvent('I', '센터 예배실', new Date(2015,7,18,00,00), new Date(2015,7,18,02,00), { class: 'vip-only' });
+
+      var renderer = new Timetable.Renderer(timetable);
+      renderer.draw('.timetable');
+    </script>
+
+</body>
+</html>

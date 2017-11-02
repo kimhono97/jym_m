@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>용용닷컴</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link rel=stylesheet type='text/css' href="http://chancein.com/css/ena.css">
+</head>
+<body>
+
+<br><br><br>
+<table width="675" border="0" align="center" cellpadding="1" cellspacing="20" style="border-top: 3px #0055bd solid; border-left: 1px DDDDDD solid; border-right: 1px DDDDDD solid; border-bottom: 1px DDDDDD solid">
+	<tr>
+		<td height="70"><a href="http://dyddyd.com"><img src="/img/error/logo.gif"></a></td>
+  </tr>
+  <tr>
+    <td><img src="img/error/error.gif"></td>
+  </tr>
+  <tr>
+    <td><img src="img/error/icon.gif" align="absmiddle"> 이 에러는 요청하신 파일이 존재하지 않는 경우에 발생하게 됩니다.</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <table width="620" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><p style="margin-left:15;"><font color="#3366CC"><strong>[확인 및 조치방법]</strong></font><br><br>
+          1) 요청한 HTML 파일이나 CGI 스크립트 파일이 존재하는지 확인하시길  바랍니다. 대부분 URL이나 <br>
+          <img src="img/error/blank.gif" width="15" height="8">링크를 잘못 연결한 경우에 발생합니다.<br><br>
+          2) 리눅스서버일 경우 대소문자를 구분합니다. 요청파일의 정확한 대소문자를 확인하시길 바랍니다.<br><br>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td><img src="img/error/icon.gif" align="absmiddle"> 5초후에 자동으로 빠르다닷컴으로 자동 이동됩니다.</td>
+  </tr>
+</table>
+<META HTTP-EQUIV="Refresh" CONTENT="1;URL=http://chancein.com/svc/">
+</body>
+</html>

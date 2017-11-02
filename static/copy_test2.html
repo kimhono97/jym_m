@@ -1,0 +1,47 @@
+<script type="text/javascript" src="/js/clipboard.min.js"></script>
+<a id="clipURL" href="http://페이지URL" style="display:block; border: 1px solid silver; padding: 10px;" onclick="return false;">http://페이지URL</a>
+<br>
+<button type="button" id="btnCopyClip" data-clipboard-action="copy" data-clipboard-target="#clipURL" style="width: 100px;height: 30px;line-height:30px;text-align: center; border: 1px solid silver;">URL복사</button>
+<br>
+<span id="txtCopyClip" style="display: none;">URL을 길게 누르면 복사하실 수 있습니다.</span>
+<script type="text/javascript">
+$(document).ready(function(){
+ 
+  var clipboardSupport = true;
+ 
+  try {
+    $.browser.chrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+ 
+    var version = $.browser.version;
+    version = new Number(version.substring(0, version.indexOf(".")));
+ 
+    //모바일 접속인지 확인
+    if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/Android/i))) {
+      //클립보드 복사기능이 될경우 (크롬 42+)
+      if ($.browser.chrome == true && version >= 42) {
+        clipboardSupport = true;
+      } else {
+        clipboardSupport = false;
+      }
+    }
+  } catch(e) {
+  }
+ 
+  if (clipboardSupport) {
+    $("#btnCopyClip").show();
+    $("#txtCopyClip").hide();
+  } else {
+    $("#btnCopyClip").hide();
+    $("#txtCopyClip").show();
+  }
+ 
+  var clipboard = new Clipboard('#btnCopyClip');
+  clipboard.on('success', function(e) {
+    alert("주소가 복사되었습니다.\n\n원하는 곳에 붙여넣기 해주세요.");
+  });
+  clipboard.on('error', function(e) {
+    alert("접속중인 기기및 브라우저에서는\n클립보드 복사를 지원하지 않습니다.\nURL을 길게 누르면 복사하실 수 있습니다.");
+  });
+ 
+});
+</script>

@@ -1,0 +1,42 @@
+*	{padding:0; margin:0;}
+body{font-size:12px; font-family:돋움; color:#000;}
+li	{list-style:none;}
+a	{text-decoration:none; color:#000;}
+#wrap{width:100%; margin:0 auto;}
+#toplogo{width:100%; height:77px; background:url(/images/mobile/topbg.jpg) repeat-x; text-align:center; padding-top:13px;}
+#topmenu{width:100%; height:30px; line-height:30px; border-bottom:#CCCCCC 2px solid; text-align:center;}
+#topmenu li{display:inline; padding:10px 20px;}
+#notice{padding:10px 20px; text-align:left;}
+#notice li{line-height:170%;}
+#olah{border-top:#e6e6e6 solid 1px; border-bottom:#e6e6e6 solid 1px; padding:10px 5px; text-align:center;}
+#link{width:90%; border:#e6e6e6 solid 1px; padding:10px; text-align:center; margin:10px auto;}
+#movie{text-align:center;}
+#qt{margin:20px 10px; text-align:left;}
+
+#content {padding:10px 10px 10px 10px;background:#ffffff;}
+
+#footer {background:#333333;height:150px;}
+#footer .searchbox {display:none;padding:7px 0 0 15px;height:30px;background:#999999;border-bottom:#666666 solid 1px;}
+#footer .searchbox .input {width:80%;background:#c0c0c0;border:#888888 solid 1px;}
+#footer .searchbox .input:focus {background:#ffffff;}
+#footer .menu {height:37px;background:#999999;}
+#footer .menu ul {padding:0;margin:0;}
+#footer .menu li {list-style:none;float:left;width:33%;text-align:center;}
+#footer .menu li a {display:block;height:33px;padding:4px 0 0 0;font-weight:bold;font-size:13px;color:#111111;}
+#footer .menu li a img {position:relative;top:4px;left:-5px;}
+#footer .menu ul .split {border-right:#666666 solid 1px;}
+#footer .copyright {border-top:#666666 solid 1px;text-align:center;padding:15px 0 15px 0;font-weight:bold;color:#999999;}
+
+/* 메뉴 */
+#menubox ul {padding:0;margin:0;}
+#menubox li {list-style-type:none;padding:0;margin:0;color:#888;border-bottom:#dfdfdf dotted 1px;background:url('./image/ico_view.gif') right 10px no-repeat;}
+#menubox .m1 .admpage {color:#ff0000;}
+#menubox .m1 a {display:block;color:#000;font-family:gothic;font-size:14px;padding:10px 0 10px 10px;font-weight:bold;}
+#menubox .m2 a {display:block;color:#888;font-family:dotum;font-size:12px;padding:10px 0 10px 20px;}
+#menubox .m3 a {display:block;color:#999;font-family:dotum;font-size:11px;padding:10px 0 10px 30px;}
+#menubox .new {font:normal 10px arial;color:#ff0000;}
+#menubox .num {font:normal 11px arial;color:#c0c0c0;}
+#menubox .selected1 a {font-weight:bold;color:#F81D00;letter-spacing:-1px;}
+#menubox .selected2,#content .snb .selected2 a {color:#F81D00;}
+#menubox .selected3,#content .snb .selected3 a {color:#F81D00;}
+/* 메뉴 */

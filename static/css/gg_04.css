@@ -1,0 +1,109 @@
+g-scrolling-carousel {
+            display: block;
+            position: relative;
+        }
+        
+        ._JTg {
+            display: block;
+            overflow-x: auto;
+            position: relative;
+            white-space: nowrap;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        
+        ._JTg::-webkit-scrollbar {
+            display: none
+        }
+        
+        ._bfj {
+            display: inline-block
+        }
+        
+        .mfr {
+            margin-top: 11px;
+        }
+        
+        #ofr {
+            margin: 0
+        }
+        
+        .mfr:first-child {
+            margin-top: 0
+        }
+        
+        ._mTn {
+            background-color: #f8f8f8
+        }
+        
+        ._P1m {
+            font-family: Roboto-Medium, HelveticaNeue-Medium, HelveticaNeue, sans-serif-medium, Arial, NanumGothic, 'Nanum Gothic', sans-serif;
+            color: rgba(0, 0, 0, .54)
+        }
+        
+        ._mup {
+            color: rgba(0, 0, 0, .54)
+        }
+        
+        ._iNn {
+            box-sizing: border-box;
+            min-height: 48px
+        }
+        
+        ._lKp,
+        ._LIp {
+            display: -webkit-flex;
+            max-height: none
+        }
+        
+        ._LIp {
+            -webkit-align-items: center
+        }
+        
+        ._Wkt {
+            overflow: hidden;
+            -webkit-flex: 1
+        }
+        
+        ._dkt {
+            margin-left: 16px;
+            -webkit-flex: none
+        }
+        
+        ._kup {
+            color: rgba(0, 0, 0, .87)
+        }
+        
+        ._I5m {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden
+        }
+        
+        ._K4m {
+            -webkit-flex: none
+        }
+        
+        ._DYo {
+            color: rgba(0, 0, 0, .54)
+        }
+        
+        ._t2p {
+            color: rgba(0, 0, 0, .26)
+        }
+        
+        ._L4m {
+            color: #fff
+        }
+        
+        ._u2p {
+            color: rgba(255, 255, 255, .3)
+        }
+        
+        ._J4m {
+            color: #4285f4
+        }
+        
+        ._ifv {
+            color: #0f9d58
+        }

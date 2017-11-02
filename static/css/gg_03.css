@@ -1,0 +1,46 @@
+._zKj {
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(248, 248, 248, 0)), color-stop(100%, rgba(248, 248, 248, 1)));
+            height: 40px;
+            position: absolute;
+            pointer-events: none;
+            right: 0;
+            top: 0;
+            width: 24px;
+            z-index: 2
+        }
+        
+        ._RAf #mlogo {
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%
+        }
+        
+        ._RAf #_Bgh {
+            height: 40px;
+            position: absolute;
+            top: 100%;
+            width: 100%
+        }
+        
+        ._RAf {
+            display: block;
+            height: 90px;
+            position: relative;
+            width: 100%
+        }
+        
+        ._RAf ._Ejh {
+            padding: 16px 0 14px;
+            position: absolute;
+            left: 50%;
+            margin-left: -46px
+        }
+        
+        ._RAf ._Djh {
+            background: url(/images/nav_logo285_hr.webp) no-repeat;
+            background-position: 0 -374px;
+            background-size: 167px;
+            height: 36px;
+            width: 92px
+        }
