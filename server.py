@@ -47,6 +47,6 @@ def root():
 
 if __name__ == "__main__":
     app.debug = True
-    app.run(host="172.31.44.210", threaded=True)
-    # AWS   : 172.31.44.210:5000
-    # JYM_c : 175.193.125.177:80
+    app.run(host="192.168.0.14", threaded=True)
+    # AWS   : 172.31.44.210
+    # JYM_c : 192.168.0.14 (175.193.125.177)

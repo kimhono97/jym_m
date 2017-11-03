@@ -41,7 +41,7 @@ def get_stat(soup):
 def get_context(soup):
     lst = []
     p = soup.findAll('p', {'class': 'post-masonry-caption'})
-    print(len(p))
+#    print(len(p))
     non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
     
     for x in p:
@@ -81,7 +81,7 @@ def get_instagup():
 
     txt = get_context(soup)
 
-    print(len(txt))
+#    print(len(txt))
 
     for i in range(len(imgs)):
         dic = {}
