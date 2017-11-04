@@ -72,7 +72,7 @@ def getContext_2(ori):  # From. biblegateway.com
                 continue
         i = i[a+len(versenum):]
         a = i.find('<')
-        if len(l) == 0 and not ('-' in i):
+        if (len(l) == 0) and not ('-' in i[:a]):
             tmp = '1'
         else:
             tmp = i[:a].strip()
@@ -114,6 +114,44 @@ def makeFullTxt(idx, txt):
 
     return full
 
+def cutTxt(idx, txt):
+    for a in range(len(txt)):
+        i = txt[a]
+        if '-' in i[0]:
+            flag = False
+            x = []
+            y = i[0].find('-')
+            x.append(int(i[0][:y]))
+            z = i[0].find('.')
+            x.append(int(i[0][y+1:z]))
+            for j in x:
+                if j == idx[2]:
+                    flag =True
+                    break
+            if flag:
+                break
+        elif int(i[0][:len(i[0])-3]) == idx[2]:
+            break
+    for b in range(len(txt)):
+        i = txt[b]
+        if '-' in i[0]:
+            flag = False
+            x = []
+            y = i[0].find('-')
+            x.append(int(i[0][:y]))
+            z = i[0].find('.')
+            x.append(int(i[0][y+1:z]))
+            for j in x:
+                if j == idx[4]:
+                    flag =True
+                    break
+            if flag:
+                break
+        elif int(i[0][:len(i[0])-3]) == idx[4]:
+            break
+    
+    return txt[a:b+1]
+
 def getQT(lang):
     idx = []
     txt = []
@@ -147,41 +185,7 @@ def getQT(lang):
         for i in s_jp:
             jp = jp + i.findAll('span', {'class': 'text'})
         txt = getContext_2(jp)
-        for a in range(len(txt)):
-            i = txt[a]
-            if '-' in i[0]:
-                flag = False
-                x = []
-                y = i[0].find('-')
-                x.append(int(i[0][:y]))
-                z = i[0].find('.')
-                x.append(int(i[0][y+1:z]))
-                for j in x:
-                    if j == idx[2]:
-                        flag =True
-                        break
-                if flag:
-                    break
-            elif int(i[0][:len(i[0])-3]) == idx[2]:
-                break
-        for b in range(len(txt)):
-            i = txt[b]
-            if '-' in i[0]:
-                flag = False
-                x = []
-                y = i[0].find('-')
-                x.append(int(i[0][:y]))
-                z = i[0].find('.')
-                x.append(int(i[0][y+1:z]))
-                for j in x:
-                    if j == idx[4]:
-                        flag =True
-                        break
-                if flag:
-                    break
-            elif int(i[0][:len(i[0])-3]) == idx[4]:
-                break
-        txt = txt[a:b+1]
+        txt = cutTxt(idx, txt)
     elif lang == 'cn':
         pre = 'https://www.biblegateway.com/passage/?search='
         post = '&version=CUVMPT'
@@ -195,47 +199,13 @@ def getQT(lang):
         for i in s_cn:
             cn = cn + i.findAll('span', {'class': 'text'})
         txt = getContext_2(cn)
-        for a in range(len(txt)):
-            i = txt[a]
-            if '-' in i[0]:
-                flag = False
-                x = []
-                y = i[0].find('-')
-                x.append(int(i[0][:y]))
-                z = i[0].find('.')
-                x.append(int(i[0][y+1:z]))
-                for j in x:
-                    if j == idx[2]:
-                        flag =True
-                        break
-                if flag:
-                    break
-            elif int(i[0][:len(i[0])-3]) == idx[2]:
-                break
-        for b in range(len(txt)):
-            i = txt[b]
-            if '-' in i[0]:
-                flag = False
-                x = []
-                y = i[0].find('-')
-                x.append(int(i[0][:y]))
-                z = i[0].find('.')
-                x.append(int(i[0][y+1:z]))
-                for j in x:
-                    if j == idx[4]:
-                        flag =True
-                        break
-                if flag:
-                    break
-            elif int(i[0][:len(i[0])-3]) == idx[4]:
-                break
-        txt = txt[a:b+1]
+        txt = cutTxt(idx, txt)
     full = makeFullTxt(idx, txt)
     
     return {'idx':idx, 'txt':txt, 'full':full, 'lang':lang}
 
 if __name__ == "__main__":
-    qt = getQT('jp')
+    qt = getQT('cn')
     print(qt['idx'])
     for i in qt['txt']:
         print(">--", i[0], i[1], "<--")
