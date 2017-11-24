@@ -107,7 +107,7 @@ def get_instagup():
         dic['likes'] = stats[i][0]
         dic['comments'] = stats[i][1]
         dic['txt'] = txt[i]
-        dic['url'] = url
+        dic['url'] = url[i]
         lst.append(dic)
     
     return lst
