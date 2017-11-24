@@ -42,7 +42,7 @@ def get_context(soup):
     lst = []
     p = soup.findAll('p', {'class': 'post-masonry-caption'})
 #    print(len(p))
-    non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
+#    non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
     
     for x in p:
         x = str(x)
@@ -68,6 +68,21 @@ def get_context(soup):
 
     return lst
 
+def get_url(soup):
+    lst = []
+    a = soup.findAll('a', {'class': 'post-masonry-link'})
+
+    for x in a:
+        x = str(x)
+        b = x.find('href=')
+        x = x[b+6:]
+        b = x.find('title=')
+        x = x[:b-2]
+#        print("http://www.instagup.com" + x)
+        lst.append("http://www.instagup.com" + x)
+
+    return lst
+
 def get_instagup():
     lst = []
     url = 'http://www.instagup.com/profile/jym_joyfulyouthmission'
@@ -80,6 +95,8 @@ def get_instagup():
     stats = get_stat(soup)
 
     txt = get_context(soup)
+
+    url = get_url(soup)
 
 #    print(len(txt))
 
