@@ -63,6 +63,12 @@ def get_context(soup):
         while a != -1:
             x = x[:a+1] + x[a+5:]
             a = x.find('&amp;')
+
+        a = x.find('<')
+        while a != -1:
+            b = x[a+1:].find('>')
+            x = x[:a] + x[a+b+2:]
+            a = x.find('<')
         
         lst.append(x)
 
