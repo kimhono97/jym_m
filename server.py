@@ -2,17 +2,32 @@ from flask import Flask, render_template, request, session, url_for, redirect
 from crawling_qt import getQT
 from crawling_notice import getNotice
 from crawling_instagup import get_instagup
+import datetime
 
 app = Flask(__name__)
 
 # ============================================================================
 
 @app.route("/qt")
-def qt():
+@app.route("/qt/<date>")
+def qt(date="none"):
+    if date == "none":
+        now = datetime.datetime.now()
+    else:
+        date = date.split("-")
+        now = datetime.date(int(date[0]), int(date[1]), int(date[2]))
+    prev = now - datetime.timedelta(days=1)
+    next = now + datetime.timedelta(days=1)
+    dates = {}
+    dates['now'] = str(now.strftime("%Y-%m-%d"))
+    dates['prev'] = str(prev.strftime("%Y-%m-%d"))
+    dates['next'] = str(next.strftime("%Y-%m-%d"))
+    
     all_qt = []
     for lang in ['kr', 'en', 'cn', 'jp']:
-        all_qt.append( getQT(lang) )
-    return render_template("qt_page.html", all_qt=all_qt)
+        all_qt.append( getQT(lang, dates['now']) )
+        
+    return render_template("qt_page.html", all_qt=all_qt, dates=dates)
 
 @app.route("/pc_mode")
 def pc_mode():
@@ -37,8 +52,9 @@ def time_table_demo():
 
 @app.route("/")
 def root():
+    date = datetime.datetime.now().strftime('%Y-%m-%d')
     lang = "kr"
-    qt = getQT(lang)
+    qt = getQT(lang, date)
     insta = get_instagup()
     notice = getNotice(3)
     return render_template("index.html", qt=qt, notice=notice, insta=insta)

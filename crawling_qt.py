@@ -152,11 +152,11 @@ def cutTxt(idx, txt):
     
     return txt[a:b+1]
 
-def getQT(lang):
+def getQT(lang, date):
     idx = []
     txt = []
     
-    url = 'http://www.joyful-c.or.kr/index.php?r=home&mod=qt_index'
+    url = 'http://www.joyful-c.or.kr/index.php?r=home&mod=qt_index&date=' + date
     source_code = requests.get(url, allow_redirects=False)
     plain_text = source_code.text
     soup = BeautifulSoup(plain_text, 'html.parser')
@@ -205,7 +205,7 @@ def getQT(lang):
     return {'idx':idx, 'txt':txt, 'full':full, 'lang':lang}
 
 if __name__ == "__main__":
-    qt = getQT('cn')
+    qt = getQT('kr', "2018-02-02")
     print(qt['idx'])
     for i in qt['txt']:
         print(">--", i[0], i[1], "<--")
